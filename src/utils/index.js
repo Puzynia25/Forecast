@@ -13,5 +13,3 @@ export const getPressureMm = (hPa) => {
 export const getTime = (seconds) => {
   return new Date(seconds * 1000).toLocaleTimeString('en-GB', { timeZone: 'Atlantic/Reykjavik' })
 }
-
-
