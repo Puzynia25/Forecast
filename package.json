@@ -1,12 +1,10 @@
 {
-  "homepage": "http://puzynia25.github.io/forecast",
   "name": "forecast",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "vite gh-pages -d build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
@@ -18,7 +16,6 @@
     "@vitejs/plugin-vue": "^4.3.1",
     "eslint": "^8.46.0",
     "eslint-plugin-vue": "^9.16.1",
-    "gh-pages": "^6.0.0",
     "vite": "^4.4.9"
   }
 }
