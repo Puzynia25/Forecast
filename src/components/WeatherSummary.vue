@@ -9,6 +9,7 @@ const props = defineProps({
 });
 
 const todayData = new Date().toLocaleString('en-EN', {weekday: 'short', year: 'numeric', month: 'long', day: 'numeric'});
+
 </script>
 
 <template>

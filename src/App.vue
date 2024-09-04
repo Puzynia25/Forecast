@@ -11,10 +11,16 @@ const cityName = ref("Paris");
 const weatherInfo = ref(null);
 const isError = computed(() => weatherInfo.value?.cod !== 200);
 
-function getWeather() {
-  fetch(`${BASE_URL}?q=${cityName.value}&units=metric&appid=${API_KEY}`)
-    .then((response) => response.json())
-    .then((data) => (weatherInfo.value = data));
+// function getWeather() {
+//   fetch(`${BASE_URL}?q=${cityName.value}&appid=${API_KEY}`)
+//     .then(response => response.json())
+//     .then(data => weatherInfo.value = data)
+// }
+
+async function getWeather() {
+  const response = await fetch(`${BASE_URL}?q=${cityName.value}&units=metric&appid=${API_KEY}`);
+  const data = await response.json();
+  weatherInfo.value = data;
 }
 
 onMounted(getWeather);
